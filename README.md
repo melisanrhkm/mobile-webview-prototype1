@@ -1,86 +1,85 @@
-# 🌐 Portal Kampus — Fabric WebView
+# 🌐 Portal Kampus - Fabric WebView
 
-\<p align="center">   \<strong>Aplikasi mobile untuk mengakses website Universitas Langlangbuana (UNLA) langsung dari dalam aplikasi.\</strong> \</p>
+Prototipe aplikasi mobile berbasis **React Native** yang digunakan untuk menampilkan website **Universitas Langlangbuana (UNLA)** (`https://www.unla.ac.id/`) langsung di dalam aplikasi menggunakan komponen WebView.
 
-\<p align="center">   \<img src="[https://img.shields.io/badge/React_Native-0.88.0-61DAFB?style=for-the-badge&logo=react&logoColor=white](https://img.shields.io/badge/React_Native-0.88.0-61DAFB?style=for-the-badge\&logo=react\&logoColor=white)" alt="React Native">   \<img src="[https://img.shields.io/badge/WebView-14.0.1-4285F4?style=for-the-badge](https://img.shields.io/badge/WebView-14.0.1-4285F4?style=for-the-badge)" alt="WebView">   \<img src="[https://img.shields.io/badge/Platform-Android-3DDC84?style=for-the-badge&logo=android&logoColor=white](https://img.shields.io/badge/Platform-Android-3DDC84?style=for-the-badge\&logo=android\&logoColor=white)" alt="Android">   \<img src="[https://img.shields.io/badge/Project-UTS-orange?style=for-the-badge](https://img.shields.io/badge/Project-UTS-orange?style=for-the-badge)" alt="UTS"> \</p>
+Repository ini merupakan hasil penggabungan **Tugas Sesi #2 dan Tugas Sesi #3** mata kuliah Pemrograman Mobile melalui dua siklus pengembangan dengan metode **Prototyping**.
+
+- **Siklus 1 (Prototype Awal):** Dibuat menggunakan MIT App Inventor dengan pemrograman berbasis blok visual.
+- **Siklus 2 (Implementasi):** Dikembangkan menggunakan React Native dan library `react-native-webview`.
 
 ---
 
-## 📌 Tentang Proyek
+## 📌 Gambaran Proyek
 
-**Portal Kampus — Fabric WebView** merupakan prototipe aplikasi mobile yang dikembangkan untuk menampilkan website Universitas Langlangbuana (UNLA) melalui komponen WebView.
+Proyek ini dikembangkan sebagai media pembelajaran untuk memahami penggunaan WebView dalam aplikasi mobile serta mengenal perbedaan pendekatan pengembangan menggunakan MIT App Inventor dan React Native.
 
-Repository ini menggabungkan dua tugas praktikum Pemrograman Mobile, yaitu Tugas Sesi #2 dan Tugas Sesi #3, yang dikembangkan menggunakan dua platform berbeda melalui pendekatan **Prototyping**.
+- **Siklus 1:** Prototipe awal menggunakan MIT App Inventor dengan komponen `WebViewer1` untuk membuka website UNLA.
+- **Siklus 2:** Implementasi aplikasi menggunakan React Native dengan `react-native-webview`, `SafeAreaView`, dan konfigurasi tampilan aplikasi.
 
-| Siklus | Platform         | Implementasi                                           |
-| :----: | ---------------- | ------------------------------------------------------ |
-|   01   | MIT App Inventor | Prototipe awal menggunakan komponen WebViewer          |
-|   02   | React Native     | Pengembangan aplikasi menggunakan react-native-webview |
+Kedua siklus memiliki tujuan yang sama, yaitu menampilkan website UNLA melalui aplikasi mobile, tetapi menggunakan platform dan pendekatan pengembangan yang berbeda.
 
-Kedua siklus memiliki tujuan yang sama, yaitu mengakses website UNLA melalui aplikasi mobile. Siklus kedua merupakan implementasi menggunakan platform berbeda, bukan klaim perbaikan berdasarkan evaluasi siklus pertama.
+---
 
-## ✨ Fitur Utama
+## ✨ Fitur dan Implementasi
 
-- 🌐 **Website Integration** — Menampilkan website Universitas Langlangbuana di dalam aplikasi.
-- 📱 **Mobile Application** — Mengakses website melalui aplikasi Android.
-- ⚡ **JavaScript Support** — Mengaktifkan JavaScript pada WebView.
-- 🔄 **Loading State** — Menampilkan status ketika halaman sedang dimuat.
-- 🛡️ **Safe Area** — Menggunakan SafeAreaView untuk membantu mengatur area tampilan aplikasi.
-- 🔁 **Refresh Website** — Tersedia pada prototipe awal MIT App Inventor melalui tombol REFRESH.
-
-## 🎯 Tujuan Pengembangan
-
-1. Memahami konsep dan penggunaan komponen WebView pada aplikasi mobile.
-2. Membuat aplikasi sederhana untuk mengakses website Universitas Langlangbuana.
-3. Mengenal pengembangan aplikasi mobile menggunakan MIT App Inventor dan React Native.
-4. Menggabungkan hasil Tugas Sesi #2 dan Tugas Sesi #3 dalam satu repository GitHub.
+- 🏛️ **Portal Kampus UNLA:** Menampilkan website resmi Universitas Langlangbuana.
+- 🌐 **WebView Integration:** Memuat halaman website langsung di dalam aplikasi mobile.
+- ⚡ **JavaScript Support:** Mengaktifkan JavaScript pada komponen WebView.
+- 🔄 **Loading State:** Menggunakan `startInLoadingState` untuk menangani kondisi pemuatan halaman.
+- 📱 **Safe Area:** Menggunakan `SafeAreaView` untuk membantu mengatur area tampilan aplikasi.
+- 🎨 **Application Header:** Menampilkan header dengan judul Portal Kampus - Fabric WebView.
+- 🔁 **Refresh pada Prototype 1:** Menggunakan tombol `REFRESH` untuk menjalankan fungsi `Reload` pada komponen `WebViewer1` di MIT App Inventor.
 
 ---
 
 ## 🔄 Metode Pengembangan — Prototyping
 
-Pengembangan proyek dilakukan melalui dua siklus dengan pendekatan platform yang berbeda.
+Pengembangan proyek dibagi menjadi dua siklus:
 
-### 01 — Prototype Awal: MIT App Inventor
+### 1. Prototype Awal — MIT App Inventor
 
-Prototipe pertama dibuat menggunakan MIT App Inventor dengan konfigurasi berikut:
+Prototipe pertama dibuat menggunakan MIT App Inventor dengan pendekatan visual block-based programming.
 
-| Komponen         | Keterangan                                           |
-| ---------------- | ---------------------------------------------------- |
-| Nama proyek      | `TEST`                                               |
-| Screen           | `Screen1`                                            |
-| Judul aplikasi   | `UNLA APK`                                           |
-| Komponen WebView | `WebViewer1`                                         |
-| Website          | [Universitas Langlangbuana](https://www.unla.ac.id/) |
-| Tombol           | `REFRESH`                                            |
-| Aksi tombol      | Menjalankan fungsi `Reload` pada `WebViewer1`        |
+| Komponen         | Keterangan                                         |
+| ---------------- | -------------------------------------------------- |
+| Nama Proyek      | `TEST`                                             |
+| Screen           | `Screen1`                                          |
+| Judul Aplikasi   | `UNLA APK`                                         |
+| Komponen WebView | `WebViewer1`                                       |
+| Website          | [https://www.unla.ac.id/](https://www.unla.ac.id/) |
+| Tombol           | `REFRESH`                                          |
+| Fungsi Tombol    | Menjalankan `Reload` pada `WebViewer1`             |
 
-Prototipe ini merupakan implementasi awal penggunaan WebView untuk menampilkan website kampus.
+### 2. Implementasi — React Native
 
-### 02 — Implementasi: React Native
+Siklus kedua dikembangkan menggunakan React Native dengan library `react-native-webview`.
 
-Pengembangan berikutnya dilakukan menggunakan React Native dengan library `react-native-webview`.
+Implementasi utama terdapat pada file [`App.tsx`](./App.tsx).
 
-Implementasi utama terdapat pada file [`App.tsx`](./App.tsx), dengan karakteristik:
+Beberapa bagian implementasinya meliputi:
 
-- Menampilkan header **Portal Kampus - Fabric WebView**.
-- Memuat website UNLA secara langsung melalui WebView.
+- Menampilkan header aplikasi Portal Kampus - Fabric WebView.
+- Memuat website UNLA menggunakan komponen WebView.
 - Mengaktifkan JavaScript.
-- Menggunakan `startInLoadingState` untuk status pemuatan halaman.
-- Menggunakan `SafeAreaView` untuk pengaturan area tampilan.
+- Mengatur status pemuatan halaman.
+- Menggunakan SafeAreaView.
 - Mengatur warna status bar aplikasi.
 
-### 📊 Perbandingan Kedua Siklus
+**Catatan:** Siklus kedua merupakan implementasi menggunakan platform berbeda. Dokumentasi evaluasi atau umpan balik pengguna pada siklus pertama tidak tersedia, sehingga tidak dinyatakan sebagai hasil perbaikan berdasarkan evaluasi tersebut.
 
-| Aspek      | Siklus 1           | Siklus 2                                   |
-| ---------- | ------------------ | ------------------------------------------ |
-| Platform   | MIT App Inventor   | React Native                               |
-| Komponen   | WebViewer          | react-native-webview                       |
-| Website    | UNLA               | UNLA                                       |
-| Refresh    | Tombol REFRESH     | Implementasi mengikuti konfigurasi WebView |
-| Pendekatan | Visual programming | JavaScript / TypeScript                    |
+---
 
-**Catatan:** Dokumentasi hasil pengujian dan evaluasi pengguna pada siklus pertama tidak tersedia. Oleh karena itu, perbandingan ini berfokus pada platform dan implementasi, bukan pada klaim peningkatan berdasarkan umpan balik.
+## 📊 Perbandingan Siklus 1 dan Siklus 2
+
+| Aspek               | Siklus 1 (MIT App Inventor) | Siklus 2 (React Native)       |
+| ------------------- | --------------------------- | ----------------------------- |
+| Platform            | MIT App Inventor            | React Native                  |
+| Teknologi WebView   | WebViewer                   | react-native-webview          |
+| Bahasa / Pendekatan | Visual Block Programming    | JavaScript / TypeScript       |
+| Website             | UNLA                        | UNLA                          |
+| Refresh             | Tombol REFRESH              | Mengikuti konfigurasi WebView |
+| Pengembangan        | Visual programming          | Pengembangan berbasis kode    |
+| Source Proyek       | Proyek MIT App Inventor     | Source code React Native      |
 
 ---
 
@@ -102,34 +101,13 @@ Implementasi utama terdapat pada file [`App.tsx`](./App.tsx), dengan karakterist
 | NDK                            | 27.1.12297006       |
 | Kotlin                         | 2.2.0               |
 
-## 📂 Struktur Repository
+---
 
-```text
-mobile-webview-prototype1/
-│
-├── android/                  # Konfigurasi dan source Android
-├── ios/                      # Konfigurasi dan source iOS
-├── apk/
-│   └── Webview.apk           # File APK
-│
-├── App.tsx                   # Komponen utama aplikasi
-├── app.json                  # Identitas aplikasi
-├── index.js                  # Entry point React Native
-│
-├── package.json              # Dependensi dan scripts
-├── package-lock.json         # Lockfile dependensi
-├── babel.config.js           # Konfigurasi Babel
-├── metro.config.js           # Konfigurasi Metro
-├── tsconfig.json             # Konfigurasi TypeScript
-├── .gitignore                # Daftar file yang diabaikan Git
-└── README.md                 # Dokumentasi proyek
-```
+## 📥 Instalasi dan Menjalankan Proyek
 
-## 🚀 Instalasi dan Menjalankan Proyek
+### Persyaratan
 
-### Prasyarat
-
-Pastikan perangkat pengembangan sudah memiliki:
+Pastikan perangkat pengembangan telah memiliki:
 
 - Node.js versi 22.11.0 atau lebih baru.
 - npm.
@@ -142,7 +120,7 @@ Pastikan perangkat pengembangan sudah memiliki:
 git clone https://github.com/melisanrhkm/mobile-webview-prototype1.git
 ```
 
-### 2. Masuk ke Folder Proyek
+### 2. Masuk ke Direktori Proyek
 
 ```bash
 cd mobile-webview-prototype1
@@ -154,7 +132,7 @@ cd mobile-webview-prototype1
 npm install
 ```
 
-### 4. Jalankan Metro
+### 4. Jalankan Metro Bundler
 
 ```bash
 npm start
@@ -162,7 +140,7 @@ npm start
 
 ### 5. Jalankan Aplikasi Android
 
-Pastikan emulator atau perangkat Android sudah terhubung dan terdeteksi.
+Hubungkan perangkat Android atau siapkan emulator yang sudah terdeteksi oleh Android SDK, kemudian jalankan:
 
 ```bash
 npm run android
@@ -172,34 +150,47 @@ npm run android
 
 ## 📦 APK Aplikasi
 
-File APK yang tersedia di repository:
+Repository ini menyediakan file APK pada direktori `apk/`.
 
-[**`apk/Webview.apk`**](./apk/Webview.apk)
+[**📥 Lihat Webview.apk**](./apk/Webview.apk)
 
-APK disertakan sebagai berkas hasil proyek. Ketersediaannya di repository tidak dengan sendirinya menjadi bukti bahwa aplikasi telah diuji pada seluruh perangkat Android.
-
----
-
-## 🎓 Informasi Akademik
-
-| Keterangan             | Detail                            |
-| ---------------------- | --------------------------------- |
-| Mata Kuliah            | Pemrograman Mobile                |
-| Universitas            | Universitas Langlangbuana         |
-| Jenis Proyek           | Ujian Tengah Semester (UTS)       |
-| Tugas yang Digabungkan | Sesi #2 dan Sesi #3               |
-| Metode Pengembangan    | Prototyping                       |
-| Platform               | MIT App Inventor dan React Native |
-
-## 👩‍💻 Author
-
-**Melisa Nurhakim**
-
-\<p>   \<a href="[https://github.com/melisanrhkm](https://github.com/melisanrhkm)">     \<img src="[https://img.shields.io/badge/GitHub-melisanrhkm-181717?style=for-the-badge&logo=github](https://img.shields.io/badge/GitHub-melisanrhkm-181717?style=for-the-badge\&logo=github)" alt="GitHub">   \</a> \</p>
+File APK disertakan sebagai bagian dari hasil proyek. Keberadaan file tersebut di repository tidak menjadi bukti pengujian pada seluruh perangkat Android.
 
 ---
 
-\<p align="center">
-&#x20; \<strong>Portal Kampus — Fabric WebView\</strong>\<br>
-&#x20; \<sub>Universitas Langlangbuana · Pemrograman Mobile · 2026\</sub>
-\</p>
+## 📁 Struktur Repository
+
+```text
+mobile-webview-prototype1/
+│
+├── android/                  # Source dan konfigurasi Android
+├── ios/                      # Source dan konfigurasi iOS
+│
+├── apk/
+│   └── Webview.apk           # File APK aplikasi
+│
+├── App.tsx                   # Komponen utama aplikasi
+├── app.json                  # Identitas aplikasi
+├── index.js                  # Entry point React Native
+│
+├── package.json              # Konfigurasi dan dependensi proyek
+├── package-lock.json         # Lockfile dependensi
+├── babel.config.js            # Konfigurasi Babel
+├── metro.config.js            # Konfigurasi Metro
+├── tsconfig.json              # Konfigurasi TypeScript
+├── .gitignore                 # File yang diabaikan Git
+└── README.md                  # Dokumentasi proyek
+```
+
+---
+
+## 🔗 Repository Proyek
+
+- 🌐 **Website Universitas Langlangbuana:** [https://www.unla.ac.id/](https://www.unla.ac.id/)
+- 💻 **Repository GitHub:** [mobile-webview-prototype1](https://github.com/melisanrhkm/mobile-webview-prototype1)
+
+---
+
+
+---
+
