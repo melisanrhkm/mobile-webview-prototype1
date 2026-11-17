@@ -1,108 +1,87 @@
 # Portal Kampus - Fabric WebView
 
-Prototipe aplikasi mobile berbasis React Native yang menampilkan situs Universitas Langlangbuana (UNLA) di dalam aplikasi menggunakan komponen WebView. Repository ini merupakan hasil penggabungan Tugas Sesi #2 dan Tugas Sesi #3 melalui dua siklus metode Prototyping.
+Prototipe aplikasi mobile untuk membuka website Universitas Langlangbuana (UNLA) langsung di dalam aplikasi menggunakan WebView. Repository ini merangkum dua tugas praktikum dalam dua siklus Prototyping:
 
-## Latar Belakang
+> **Siklus 1:** MIT App Inventor · **Siklus 2:** React Native
 
-Perangkat mobile dapat digunakan untuk mengakses layanan dan informasi kampus secara lebih praktis. Salah satu penerapannya adalah penggunaan komponen WebView untuk menampilkan halaman website langsung di dalam aplikasi mobile.
+## Tentang Proyek
 
-Proyek ini menggabungkan dua tugas praktikum yang memiliki tujuan serupa, yaitu membuat aplikasi mobile yang dapat menampilkan website menggunakan WebView. Pengembangan dilakukan melalui dua siklus Prototyping dengan platform yang berbeda.
+WebView memungkinkan halaman website ditampilkan dari dalam aplikasi mobile. Kedua siklus pada proyek ini memiliki tujuan yang sama, tetapi menggunakan platform berbeda. Siklus 1 dibuat dengan MIT App Inventor, sedangkan Siklus 2 dikembangkan dengan React Native dan `react-native-webview`.
 
 ## Tujuan
 
-1. Memahami penerapan komponen WebView pada aplikasi mobile.
-2. Membuat aplikasi sederhana untuk mengakses website Universitas Langlangbuana.
-3. Mengenal proses pengembangan aplikasi menggunakan MIT App Inventor dan React Native.
-4. Menggabungkan hasil Tugas Sesi #2 dan Tugas Sesi #3 dalam satu repository GitHub.
+- Memahami penggunaan komponen WebView pada aplikasi mobile.
+- Membuat aplikasi sederhana untuk membuka website Universitas Langlangbuana.
+- Mengenal pengembangan aplikasi menggunakan MIT App Inventor dan React Native.
+- Menggabungkan Tugas Sesi #2 dan Tugas Sesi #3 dalam satu repository.
 
-## Metode Pengembangan
+## Metode Prototyping
 
-Metode yang digunakan adalah **Prototyping**, yaitu metode pengembangan perangkat lunak yang dilakukan melalui pembuatan prototype secara bertahap.
+Pengembangan dilakukan dalam dua siklus dengan tujuan menampilkan website melalui WebView. Perbedaan platform menjadikan cara pembuatannya berbeda, tetapi tidak menjadi bukti bahwa Siklus 2 merupakan perbaikan berdasarkan evaluasi Siklus 1. Hasil evaluasi atau umpan balik pengguna tidak didokumentasikan.
 
-Pada proyek ini, metode Prototyping diterapkan melalui dua siklus pengembangan:
+| Siklus | Tugas dan platform | Ringkasan |
+| --- | --- | --- |
+| 1 | Tugas Sesi #2 — MIT App Inventor | Proyek `TEST` pada `Screen1`, dengan judul aplikasi `UNLA APK`, komponen `WebViewer1`, dan tombol `REFRESH` untuk menjalankan fungsi `Reload` pada WebViewer1. |
+| 2 | Tugas Sesi #3 — React Native | Menggunakan `react-native-webview` untuk memuat website UNLA. Lihat [App.tsx](./App.tsx). |
 
-1. **Siklus 1 – Prototype Awal:** Pembuatan aplikasi WebView menggunakan MIT App Inventor.
-2. **Siklus 2 – Pengembangan Prototype:** Pembuatan aplikasi WebView menggunakan React Native.
+## Siklus 1 — MIT App Inventor
 
-Kedua siklus merupakan implementasi menggunakan platform yang berbeda. Tidak terdapat klaim evaluasi atau perbaikan berdasarkan umpan balik pengguna karena hasil evaluasi tersebut tidak didokumentasikan.
+Instruksi Tugas Sesi #2 meminta pembuatan prototipe sederhana yang langsung memuat website kampus atau website berita teknologi menggunakan WebView. Data proyek yang tersedia:
 
-## Siklus 1 – Prototype Awal (MIT App Inventor)
+| Bagian | Detail |
+| --- | --- |
+| Platform | MIT App Inventor |
+| Nama proyek | `TEST` |
+| Screen | `Screen1` |
+| Judul aplikasi | `UNLA APK` |
+| Komponen WebView | `WebViewer1` |
+| Website | [https://www.unla.ac.id/](https://www.unla.ac.id/) |
+| Tombol | `REFRESH` |
+| Aksi tombol | Menjalankan fungsi `Reload` pada `WebViewer1` |
 
-Pada siklus pertama, aplikasi dibuat menggunakan MIT App Inventor dengan memanfaatkan komponen WebViewer untuk menampilkan website.
+Rincian tampilan lain, konfigurasi komponen yang tidak tercantum di atas, hasil pengujian, dan evaluasi tidak tersedia. Karena itu, README ini tidak menyimpulkan detail-detail tersebut.
 
-### Implementasi
+## Siklus 2 — React Native
 
-Berdasarkan berkas proyek yang tersedia, implementasi memiliki konfigurasi berikut:
+Siklus 2 menggunakan React Native dan `react-native-webview`. Berdasarkan implementasi di [App.tsx](./App.tsx), aplikasi:
 
-| Komponen         | Keterangan                      |
-| ---------------- | ------------------------------- |
-| Platform         | MIT App Inventor                |
-| Nama proyek      | TEST                            |
-| Screen           | Screen1                         |
-| Judul aplikasi   | UNLA APK                        |
-| Komponen WebView | WebViewer1                      |
-| Website          | https://www.unla.ac.id/         |
-| Tombol           | REFRESH                         |
-| Fungsi tombol    | Memuat ulang halaman WebViewer1 |
+- Menampilkan header “Portal Kampus - Fabric WebView”.
+- Langsung memuat website Universitas Langlangbuana ([https://www.unla.ac.id](https://www.unla.ac.id)) di dalam WebView.
+- Mengaktifkan JavaScript dan menggunakan `startInLoadingState`.
+- Menggunakan `SafeAreaView` serta mengatur warna status bar.
 
-### Fitur
+Kedua siklus sama-sama bertujuan menampilkan website UNLA melalui WebView, dengan pendekatan platform yang berbeda. Tidak ada klaim bahwa Siklus 2 dibuat sebagai perbaikan berdasarkan umpan balik Siklus 1 karena bukti evaluasinya tidak tersedia.
 
-- Menampilkan website Universitas Langlangbuana melalui WebViewer.
-- Menyediakan tombol REFRESH untuk memuat ulang halaman website.
+## Teknologi
 
-## Siklus 2 – Pengembangan Prototype (React Native)
+Versi dan konfigurasi berikut merujuk pada `package.json`, `package-lock.json`, dan konfigurasi Gradle proyek:
 
-Pada siklus kedua, aplikasi dikembangkan menggunakan React Native dengan library `react-native-webview`.
-
-Pengembangan ini menggunakan JavaScript/TypeScript dan lingkungan React Native untuk membuat aplikasi mobile yang menampilkan website Universitas Langlangbuana.
-
-### Implementasi
-
-| Komponen           | Keterangan                     |
-| ------------------ | ------------------------------ |
-| Framework          | React Native                   |
-| Bahasa pemrograman | TypeScript                     |
-| Komponen WebView   | react-native-webview           |
-| Website            | https://www.unla.ac.id/        |
-| File utama         | App.tsx                        |
-| Tampilan header    | Portal Kampus - Fabric WebView |
-
-### Fitur
-
-- Menampilkan halaman website Universitas Langlangbuana.
-- Menggunakan komponen WebView untuk memuat website di dalam aplikasi.
-- Mengaktifkan JavaScript pada WebView.
-- Menampilkan indikator proses pemuatan halaman awal.
-- Menggunakan Safe Area Context untuk mendukung area aman tampilan perangkat.
-
-### Teknologi yang Digunakan
-
-| Teknologi                      | Versi/Keterangan |
-| ------------------------------ | ---------------- |
-| React Native                   | 0.88.0           |
-| React                          | 19.3.0           |
-| TypeScript                     | 6.0.3            |
-| react-native-webview           | ^14.0.1          |
-| react-native-safe-area-context | ^5.5.2           |
-| Node.js                        | >=22.11.0        |
-| Gradle                         | 9.4.1            |
-| Android Compile SDK            | 37               |
-| Android Build Tools            | 37.0.0           |
-| Android Target SDK             | 36               |
-| Android Minimum SDK            | 24               |
-| NDK                            | 27.1.12297006    |
-| Kotlin                         | 2.2.0            |
+| Teknologi | Versi atau konfigurasi |
+| --- | --- |
+| React Native | 0.88.0 |
+| React | 19.3.0 |
+| TypeScript | 6.0.3 |
+| `react-native-webview` | `^14.0.1` |
+| `react-native-safe-area-context` | `^5.5.2` |
+| Node.js | `>= 22.11.0` |
+| Gradle wrapper | 9.4.1 |
+| Android Compile SDK | 37 |
+| Android Build Tools | 37.0.0 |
+| Android Target SDK | 36 |
+| Android Minimum SDK | 24 |
+| NDK | 27.1.12297006 |
+| Kotlin | 2.2.0 |
 
 ## Struktur Repository
 
+Berikut ringkasan berkas utama dan folder proyek:
+
 ```text
 mobile-webview-prototype1/
-│
 ├── android/
 ├── ios/
 ├── apk/
 │   └── Webview.apk
-│
 ├── App.tsx
 ├── index.js
 ├── package.json
@@ -113,3 +92,5 @@ mobile-webview-prototype1/
 ├── .gitignore
 └── README.md
 ```
+
+APK tersedia di [apk/Webview.apk](./apk/Webview.apk).
